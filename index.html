@@ -192,18 +192,40 @@
 
   <!-- Màn 1: Hoa hồng -->
   <div id="intro-screen">
-    <div class="rose-wrap">
-      <div class="rose-bloom">
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-      </div>
-      <div class="stem">
-        <div class="leaf left"></div>
-        <div class="leaf right"></div>
-      </div>
+       <div class="rose-wrap" style="height: auto;">
+      <svg width="210" height="250" viewBox="0 0 210 250" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 22px rgba(255, 130, 160, 0.55)); animation: bloomAnim 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;">
+        <!-- Cành và lá -->
+        <path d="M105 95 C103 145, 107 195, 105 240" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M105 145 C132 135, 152 145, 148 160 C134 166, 115 158, 105 145 Z" fill="url(#leafGrad)"/>
+        <path d="M104 178 C77 168, 57 178, 61 193 C75 199, 94 191, 104 178 Z" fill="url(#leafGrad)"/>
+        <!-- Đài hoa -->
+        <path d="M105 96 C90 106, 76 112, 72 108 C82 98, 92 92, 105 92 C118 92, 128 98, 138 108 C134 112, 120 106, 105 96 Z" fill="#4f734c"/>
+        <path d="M105 96 L96 114 L105 104 L114 114 Z" fill="#3b5938"/>
+        <!-- Cánh hoa ngoài xòe rộng -->
+        <path d="M105 95 C52 95, 32 62, 58 44 C76 32, 95 55, 105 72 C115 55, 134 32, 152 44 C178 62, 158 95, 105 95 Z" fill="url(#petalOuter)"/>
+        <!-- Cánh hoa tầng giữa -->
+        <path d="M105 92 C64 90, 52 54, 78 38 C92 30, 100 46, 105 60 C110 46, 118 30, 132 38 C158 54, 146 90, 105 92 Z" fill="url(#petalMid)"/>
+        <!-- Nụ xoáy trung tâm -->
+        <path d="M105 86 C80 84, 74 52, 92 36 C100 29, 110 29, 118 36 C136 52, 130 84, 105 86 Z" fill="url(#petalInner)"/>
+        <path d="M90 50 C98 40, 112 40, 120 50 C114 60, 96 60, 90 50 Z" fill="#ffd6e0" opacity="0.85"/>
+        <defs>
+          <linearGradient id="stemGrad" x1="105" y1="95" x2="105" y2="240" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#8cb388"/><stop offset="1" stop-color="#3c5939"/>
+          </linearGradient>
+          <linearGradient id="leafGrad" x1="60" y1="140" x2="150" y2="195" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#98bf93"/><stop offset="1" stop-color="#456642"/>
+          </linearGradient>
+          <linearGradient id="petalOuter" x1="105" y1="35" x2="105" y2="95" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffc2d1"/><stop offset="0.6" stop-color="#e56b86"/><stop offset="1" stop-color="#9e354d"/>
+          </linearGradient>
+          <linearGradient id="petalMid" x1="105" y1="32" x2="105" y2="92" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffe5ec"/><stop offset="0.55" stop-color="#f2849e"/><stop offset="1" stop-color="#b5435c"/>
+          </linearGradient>
+          <linearGradient id="petalInner" x1="105" y1="28" x2="105" y2="86" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff0f3"/><stop offset="0.5" stop-color="#ff9ebb"/><stop offset="1" stop-color="#c94a6a"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
     <div class="intro-text">Gửi Anh ❤️</div>
     <div class="tap-hint">Chạm vào bông hoa để mở quà...</div>
