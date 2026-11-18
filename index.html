@@ -22,36 +22,46 @@
     transition: opacity 1.2s ease, transform 1.2s ease;
   }
   .rose-wrap {
-    position: relative; width: 160px; height: 220px;
+    position: relative; width: 200px; height: 240px;
     display: flex; flex-direction: column; align-items: center;
-    animation: floatRose 3s ease-in-out infinite;
+    animation: floatRose 3.5s ease-in-out infinite;
   }
   .rose-bloom {
-    width: 90px; height: 90px; position: relative;
+    width: 140px; height: 75px; position: relative;
     transform: scale(0.2); opacity: 0;
     animation: bloomAnim 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    filter: drop-shadow(0 6px 18px rgba(255, 165, 180, 0.45));
   }
   .petal {
-    position: absolute; inset: 0; border-radius: 50% 50% 20% 20%;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 40%, #d46a7e 100%);
-    box-shadow: 0 0 25px rgba(255, 154, 158, 0.5);
+    position: absolute; bottom: 8px; left: 50%;
+    border-radius: 75% 15% 75% 15%;
+    background: linear-gradient(160deg, #ffe5ec 0%, #f497a9 45%, #b55468 100%);
+    box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.25);
     transform-origin: bottom center;
   }
-  .petal:nth-child(1) { transform: rotate(-35deg) scale(0.95); opacity: 0.85; }
-  .petal:nth-child(2) { transform: rotate(35deg) scale(0.95); opacity: 0.85; }
-  .petal:nth-child(3) { transform: rotate(-18deg) scale(1.02); }
-  .petal:nth-child(4) { transform: rotate(18deg) scale(1.02); }
-  .petal:nth-child(5) { transform: scale(1.05); background: linear-gradient(135deg, #ffb6c1, #c94b63); }
+  .p1 { width: 72px; height: 42px; margin-left: -62px; transform: rotate(-58deg); z-index: 1; }
+  .p2 { width: 72px; height: 42px; margin-left: -10px; transform: rotate(58deg) scaleX(-1); z-index: 1; }
+  .p3 { width: 62px; height: 46px; margin-left: -48px; transform: rotate(-32deg); z-index: 2; }
+  .p4 { width: 62px; height: 46px; margin-left: -14px; transform: rotate(32deg) scaleX(-1); z-index: 2; }
+  .p5 { width: 52px; height: 48px; margin-left: -26px; transform: rotate(0deg); z-index: 3; border-radius: 50% 50% 45% 45%; }
+  .rose-bloom::after {
+    content: ""; position: absolute; bottom: -4px; left: 50%; margin-left: -18px;
+    width: 36px; height: 14px;
+    background: linear-gradient(to bottom, #6b8e68, #3d5a3c);
+    border-radius: 0 0 50% 50%; z-index: 4;
+  }
   .stem {
-    width: 4px; height: 120px; background: linear-gradient(to bottom, #6b8e23, #2e4012);
-    border-radius: 2px; margin-top: -10px;
+    width: 3.5px; height: 145px;
+    background: linear-gradient(to right, #8fae8b, #4c6b49);
+    border-radius: 3px; margin-top: -6px;
   }
   .leaf {
-    position: absolute; width: 32px; height: 16px; background: #4f6d19;
-    border-radius: 0 50% 0 50%; top: 125px;
+    position: absolute; width: 34px; height: 14px;
+    background: linear-gradient(135deg, #98b894, #4c6b49);
+    border-radius: 0 70% 0 70%;
   }
-  .leaf.left { left: 45px; transform: rotate(-20deg); }
-  .leaf.right { right: 45px; transform: scaleX(-1) rotate(-20deg); top: 145px; }
+  .leaf.left { left: 66px; top: 135px; transform: rotate(-28deg); }
+  .leaf.right { right: 66px; top: 105px; transform: scaleX(-1) rotate(-25deg); }
   .intro-text {
     margin-top: 25px; font-family: 'Cormorant Garamond', serif;
     font-size: 26px; letter-spacing: 2px; color: #ffd6e0;
